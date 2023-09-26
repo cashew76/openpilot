@@ -172,7 +172,7 @@ class AlwaysOnLateral:
     self.blinkers_active = car_state.leftBlinker or car_state.rightBlinker
     self.standstill = car_state.vEgo <= max(car_params.minSteerSpeed, MIN_LATERAL_CONTROL_SPEED) or car_state.standstill
     self.steer_fault = car_state.steerFaultTemporary or car_state.steerFaultPermanent
-    self.invalid_gear = car_state.gearShifter not in [car.CarState.GearShifter.drive, car.CarState.GearShifter.sport, car.CarState.GearShifter.low, car.CarState.GearShifter.eco]
+    self.invalid_gear = car_state.gearShifter not in [car.CarState.GearShifter.neutral, car.CarState.GearShifter.drive, car.CarState.GearShifter.sport, car.CarState.GearShifter.low, car.CarState.GearShifter.eco]
     self.calibrated = sm['liveCalibration'].calStatus == log.LiveCalibrationData.Status.calibrated
 
     # Check events to see if we should disable or soft disable
