@@ -715,7 +715,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
   },
 
   EventName.wrongGear: {
-    #ET.SOFT_DISABLE: user_soft_disable_alert("Gear not D"),
+    ET.USER_DISABLE: user_soft_disable_alert("Gear not D"),
     #ET.NO_ENTRY: NoEntryAlert("Gear not D"),
   },
 
@@ -986,7 +986,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
       "Shift to L",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.HIGH, VisualAlert.wrongGear, AudibleAlert.promptRepeat, 4.),
-    ET.NO_ENTRY: NoEntryAlert("Shift To L To Use Pedal Interceptor"),
+    #ET.NO_ENTRY: NoEntryAlert("Shift To L To Use Pedal Interceptor"),
   },
 }
 
